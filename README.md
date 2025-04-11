@@ -1,4 +1,4 @@
-# Data Structures & Algorithms Repository
+# Data Structures & Algorithms
 
 A comprehensive collection of data structures and algorithms implemented in C# with detailed explanations, complexity analysis, and practical examples.
 
