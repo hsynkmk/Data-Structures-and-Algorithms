@@ -1,6 +1,13 @@
 # 🚀 DSA Interview Cheat Sheet
 
-**Read this the morning of the interview.** Every concept compressed to one line. Drill into the linked file only if rusty.
+**Read this the morning of the interview.** Every concept compressed to one line. If a row feels
+rusty, jump to the full lesson:
+
+[Foundations](00-Foundations/README.md) · [Linear](01-Linear-Structures/README.md) ·
+[Trees & Heaps](02-Trees-and-Heaps/README.md) · [Graphs](03-Graphs/README.md) ·
+[Sorting](04-Sorting/README.md) · [Searching](05-Searching/README.md) ·
+[Paradigms](06-Algorithm-Paradigms/README.md) · [Strings](07-String-Algorithms/README.md) ·
+[Patterns](08-Interview-and-Patterns/01.Problem-Solving-Patterns.md)
 
 ---
 

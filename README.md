@@ -1,12 +1,34 @@
-# Data Structures & Algorithms (C#)
+# Data Structures & Algorithms — A Complete Course (C#)
 
-A focused reference of data structures, sorting & searching algorithms — implemented in C#, with complexity analysis, common pitfalls, and interview-style notes.
+> **Read this repo top to bottom and you won't need another DSA resource.**
+> Every topic starts with plain-English intuition, builds up to clean C# code, and ends with
+> hand-picked problems **solved in full**. No prior DSA knowledge assumed.
 
-> 🎯 **Crunched for time before an interview?** Start with the [Interview Cheat Sheet](INTERVIEW_CHEATSHEET.md) — every structure and algorithm boiled down to one row.
+This isn't a loose reference — it's an **ordered curriculum**. The folders are numbered
+`00 → 08`. Read them in order and each topic only relies on things you've already learned.
+
+🎯 **In a hurry before an interview?** Jump to the [Interview Cheat Sheet](INTERVIEW_CHEATSHEET.md).
+🧭 **New here?** Start with [How to Use This Repo](00-Foundations/01.How-To-Use-This-Repo.md).
 
 ---
 
-## ⚡ Big O at a Glance
+## 🗺️ The Curriculum
+
+| # | Module | What you'll learn | Why it's here |
+|---|--------|-------------------|---------------|
+| **00** | [Foundations](00-Foundations/README.md) | Big-O, recursion, bit manipulation | The lens you'll view everything else through |
+| **01** | [Linear Structures](01-Linear-Structures/README.md) | Arrays, strings, linked lists, stacks, queues, hash tables | The building blocks of every program |
+| **02** | [Trees & Heaps](02-Trees-and-Heaps/README.md) | BST, traversals, AVL, heaps, tries, union-find, segment trees | Hierarchies, priorities, and fast range/set ops |
+| **03** | [Graphs](03-Graphs/README.md) | Representations, BFS/DFS, topo sort, shortest paths, MST | Modeling relationships and networks |
+| **04** | [Sorting](04-Sorting/README.md) | 9 sorting algorithms + when to use which | The classic lens on trade-offs |
+| **05** | [Searching](05-Searching/README.md) | Linear, binary (+ on the answer), jump, exponential, ternary | Finding things fast |
+| **06** | [Algorithm Paradigms](06-Algorithm-Paradigms/README.md) | Two pointers, sliding window, prefix sums, divide & conquer, backtracking, greedy, DP | **How to actually solve problems** |
+| **07** | [String Algorithms](07-String-Algorithms/README.md) | KMP, Rabin-Karp, Z-algorithm | Pattern matching at scale |
+| **08** | [Interview & Patterns](08-Interview-and-Patterns/README.md) | Pattern catalog, study plan, cheat sheet | Tying it all together |
+
+---
+
+## ⚡ Big-O at a Glance
 
 | Notation | Name | Example |
 |----------|------|---------|
@@ -14,79 +36,37 @@ A focused reference of data structures, sorting & searching algorithms — imple
 | O(log n) | Logarithmic | Binary search, balanced BST ops |
 | O(n) | Linear | Single loop, linear search |
 | O(n log n) | Linearithmic | Merge sort, heap sort, quick sort (avg) |
-| O(n²) | Quadratic | Bubble sort, selection sort, nested loops |
+| O(n²) | Quadratic | Bubble sort, nested loops |
 | O(2ⁿ) | Exponential | Naive recursive Fibonacci, brute-force subsets |
 | O(n!) | Factorial | Permutations, brute-force TSP |
 
-Read more → [01.BigONotation.md](DataStructures/01.BigONotation.md)
+Full explanation → [Big-O and Complexity](00-Foundations/02.Big-O-and-Complexity.md)
 
 ---
 
-## 📚 Data Structures
+## 🧭 How to Study This
 
-### Linear
-| Structure | Access | Search | Insert | Delete | Notes |
-|-----------|--------|--------|--------|--------|-------|
-| [Array](DataStructures/02.Arrays.md) | O(1) | O(n) | O(n) | O(n) | Fixed size, cache-friendly |
-| [Linked List](DataStructures/03.LinkedLists.md) | O(n) | O(n) | O(1)* | O(1)* | *at known node |
-| [Stack](DataStructures/04.Stacks.md) | O(n) | O(n) | O(1) | O(1) | LIFO |
-| [Queue](DataStructures/05.Queues.md) | O(n) | O(n) | O(1) | O(1) | FIFO |
-| [Hash Table](DataStructures/06.HashTables.md) | — | O(1) avg | O(1) avg | O(1) avg | Worst O(n) on bad hash |
+1. **Don't skip Foundations.** Big-O and recursion are the vocabulary for everything after.
+2. **Read actively.** When you hit the 🧾 Pseudocode, cover the C# and try to write it yourself.
+3. **Do the 🎯 Practice.** Attempt each problem *before* reading the solution. The solution is
+   right there when you get stuck — that's the point.
+4. **Use the self-check questions** at the end of each file as your "am I ready to move on?" gate.
+5. **Loop back via** [Module 08](08-Interview-and-Patterns/README.md) once you've covered the
+   structures — it maps problem *signals* to the right technique.
 
-### Tree-Based
-| Structure | Search | Insert | Delete | Notes |
-|-----------|--------|--------|--------|-------|
-| [Binary Tree / BST](DataStructures/07.BinaryTrees.md) | O(log n) avg, O(n) worst | same | same | Skewed tree → O(n) |
-| [AVL Tree](DataStructures/08.AVL_Trees.md) | O(log n) | O(log n) | O(log n) | Self-balancing BST |
-| [Heap](DataStructures/09.Heap.md) | O(n) | O(log n) | O(log n) | Min/Max access O(1) |
-| [Trie](DataStructures/10.Trias.md) | O(L) | O(L) | O(L) | L = key length, prefix search |
-
-### Graph
-- [Graphs (directed)](DataStructures/11.Graphs.md)
-- [Undirected Graphs](DataStructures/12.UndirectedGraphs.md)
+A concrete week-by-week roadmap lives in the [Study Plan](08-Interview-and-Patterns/02.Study-Plan.md).
 
 ---
 
-## 🔄 Sorting Algorithms
+## 📐 How Each Topic Is Structured
 
-| Algorithm | Best | Avg | Worst | Space | Stable | Notes |
-|-----------|------|-----|-------|-------|--------|-------|
-| [Bubble Sort](SortingAlgorithms/BubbleSort.md) | O(n) | O(n²) | O(n²) | O(1) | ✅ | Teaching only |
-| [Selection Sort](SortingAlgorithms/SelectionSort.md) | O(n²) | O(n²) | O(n²) | O(1) | ❌ | Min swaps |
-| [Insertion Sort](SortingAlgorithms/InsertionSort.md) | O(n) | O(n²) | O(n²) | O(1) | ✅ | Great for small/nearly-sorted |
-| [Merge Sort](SortingAlgorithms/MergeSort.md) | O(n log n) | O(n log n) | O(n log n) | O(n) | ✅ | Predictable, external sort |
-| [Quick Sort](SortingAlgorithms/QuickSort.md) | O(n log n) | O(n log n) | O(n²) | O(log n) | ❌ | Fastest in practice |
-| [Heap Sort](SortingAlgorithms/HeapSort.md) | O(n log n) | O(n log n) | O(n log n) | O(1) | ❌ | In-place, no worst case |
-| [Counting Sort](SortingAlgorithms/CountingSort.md) | O(n+k) | O(n+k) | O(n+k) | O(k) | ✅ | Integers in known range |
-| [Bucket Sort](SortingAlgorithms/BucketSort.md) | O(n+k) | O(n+k) | O(n²) | O(n) | ✅ | Uniform distribution |
-
----
-
-## 🔍 Searching Algorithms
-
-| Algorithm | Time | Requires Sorted? | Notes |
-|-----------|------|------------------|-------|
-| [Linear Search](SearchingAlgorithms/LinearSearch.md) | O(n) | No | Simplest |
-| [Binary Search](SearchingAlgorithms/BinarySearch.md) | O(log n) | Yes | Halves range |
-| [Ternary Search](SearchingAlgorithms/TernarySearch.md) | O(log₃ n) | Yes | Splits in 3, more comparisons |
-| [Jump Search](SearchingAlgorithms/JumpSearch.md) | O(√n) | Yes | Block + linear |
-| [Exponential Search](SearchingAlgorithms/ExponentialSearch.md) | O(log n) | Yes | Good for unbounded/infinite arrays |
-
----
-
-## 🗺️ Recommended Study Order (interview prep)
-
-1. **Big O Notation** — frame everything else
-2. **Arrays + Linked Lists** — building blocks
-3. **Stacks + Queues** — used everywhere (BFS, DFS, expressions)
-4. **Hash Tables** — the secret weapon for O(1) lookups
-5. **Trees + BST + Heaps** — recursion, traversals, priority queues
-6. **Sorting (Merge / Quick / Heap)** — and *why* they differ
-7. **Binary Search** — including its less-obvious applications
-8. **Graphs (BFS / DFS)** — wide variety of problems
+Every file follows the same shape — intuition → how it works → pseudocode → C# → complexity →
+trade-offs → mistakes → applications → **practice with full solutions** → takeaways. See
+[TEMPLATE.md](TEMPLATE.md) for the full spec (and use it if you contribute).
 
 ---
 
 ## 🤝 Contributing
 
-PRs welcome — open an issue or fork & submit.
+PRs welcome. New topics must follow [TEMPLATE.md](TEMPLATE.md) so the learning curve stays
+consistent. Open an issue first for anything large.
